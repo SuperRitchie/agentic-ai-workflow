@@ -102,6 +102,7 @@ jobs:
           EOF
 
             gh issue create \
+              --repo "${{ github.repository }}" \
               --title "Python unit tests failed in workflow run #${{ github.run_number }}" \
               --body-file issue_body.md \
               --assignee "$NOTIFY_USER"
